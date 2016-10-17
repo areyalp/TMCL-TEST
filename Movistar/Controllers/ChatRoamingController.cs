@@ -14,6 +14,7 @@ namespace Movistar.Controllers
             return RedirectToAction("Chat1");
         }
 
+        [HttpGet]
         public ActionResult Chat1()
         {
             return View();
