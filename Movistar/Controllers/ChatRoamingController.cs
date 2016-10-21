@@ -20,6 +20,18 @@ namespace Movistar.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Chat1(int numero=0)
+        {
+            return RedirectToAction("ChatEnEspera");
+        }
+
+        [HttpGet]
+        public ActionResult ChatEnEspera()
+        {
+            return View();
+        }
+
 
     }
 }

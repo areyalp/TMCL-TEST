@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewBag.Title = "Chat En Espera";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
 <html class="aui">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>01-Chat 1</title>
-
+       
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrapv2.min.css" rel="stylesheet" />
 
@@ -25,41 +29,22 @@
             <div class="row-fluid">
                 <div class="span8 xs-span-12">
                     <section class="chat-roaming form">
-                        <header class="chat-roaming-header">
+                        <header class="chat-roaming-header  header-center">
                             <h3 class="headline ico-chat">Chatea con un ejecutivo y resuelve tus dudas</h3>
                             <p class="info ico-clock"> Horario de atención: 9:00 a 23:00 hrs. de Chile</p>
                         </header>
-                        <form class="form-standard" method="post">
+                        <div class="chat-roaming-alert">
+                            <div class="chat-roaming-center">
+                                <p class="chat-text-bold">Buscando un ejecutivo disponible ...</p>
+                                <div class="banner-content-loader">
+                                    <div class="loader">
+                                        <img src="~/images/ico_loading_green.png" alt="Buscando un ejecutivo disponible ...">
 
-                            <div class="form_row">
-                                <label class="label-chat" for="nombre">Nombre</label>
-                                <input class="input-chat" name="nombre" placeholder="Ej: Luis Perez" type="text">
-
+                                    </div>
+                                </div>
+                                <p class="chat-text-bold">Actualmente estas en el puesto 1 de la cola.</p>
                             </div>
-                            <div class="form_row">
-                                <label class="label-chat" for="email">E-mail</label>
-                                <input class="input-chat" name="email" placeholder="Ej: tuemail@gmail.com" type="email">
-                            </div>
-                            <div class="form_row  form-help">
-                                <label class="label-chat" for="cell-phone">Celular</label>
-                                <input class="input-chat" name="cell-phone" placeholder="Ej: 996171859" type="tel">
-
-                                <span class="content-tooltip">
-                                    <a class="ico-info-alert  btn-tooltip" href="#">
-                                        <span class="item-hidden">Ayuda</span>
-                                        <p class="tooltip">
-                                            Recuerda que el número 9 se integra como parte del número móvil (sin dígito 0 al comienzo).  <br><strong>Ejemplo: 996171859</strong>
-                                        </p>
-                                    </a>
-
-                                    
-                                </span>
-                            </div>
-
-                            <div class="form_row  submit_row">
-                                <button type="submit" class="btn-default  btn-green" id="button">Comenzar conversación</button>
-                            </div>
-                        </form>
+                        </div>
                     </section>
 
                 </div>
@@ -150,6 +135,7 @@
 
         </div>
     </div>
+
     <script src="~/Scripts/main.js"></script>
 </body>
 </html>
